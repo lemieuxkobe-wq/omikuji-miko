@@ -11,7 +11,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --crimson:  #c0392b;
+      --crimson:  #c82459;
+      --crimson-dark: #a01d48;
       --gold:     #c9a84c;
       --gold-lt:  #f0d080;
       --ivory:    #fdf8f0;
@@ -42,7 +43,7 @@
       text-align: center;
       padding: 3rem 1.5rem 4rem;
       background:
-        radial-gradient(ellipse at 50% 0%, rgba(192,57,43,0.22) 0%, transparent 65%),
+        radial-gradient(ellipse at 50% 0%, rgba(200,36,89,0.28) 0%, transparent 65%),
         linear-gradient(180deg, #1a0a04 0%, #2e1106 40%, #1a0a04 100%);
       overflow: hidden;
     }
@@ -51,7 +52,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' opacity='0.06'%3E%3Crect x='60' y='40' width='10' height='240' fill='%23c0392b'/%3E%3Crect x='250' y='40' width='10' height='240' fill='%23c0392b'/%3E%3Crect x='40' y='60' width='240' height='16' rx='4' fill='%23c0392b'/%3E%3Crect x='50' y='90' width='220' height='12' rx='3' fill='%23c0392b'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' opacity='0.06'%3E%3Crect x='60' y='40' width='10' height='240' fill='%23c82459'/%3E%3Crect x='250' y='40' width='10' height='240' fill='%23c82459'/%3E%3Crect x='40' y='60' width='240' height='16' rx='4' fill='%23c82459'/%3E%3Crect x='50' y='90' width='220' height='12' rx='3' fill='%23c82459'/%3E%3C/svg%3E");
       background-repeat: repeat;
       pointer-events: none;
     }
@@ -90,7 +91,7 @@
       color: #fff;
       line-height: 1.35;
       margin-bottom: 1rem;
-      text-shadow: 0 2px 20px rgba(192,57,43,0.6), 0 0 40px rgba(201,168,76,0.3);
+      text-shadow: 0 2px 20px rgba(200,36,89,0.6), 0 0 40px rgba(201,168,76,0.3);
     }
     .hero-title span { color: var(--gold-lt); }
 
@@ -118,7 +119,7 @@
 
     .cta-btn {
       display: inline-block;
-      background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #c0392b 100%);
+      background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 50%, var(--crimson-dark) 100%);
       color: #fff;
       font-family: 'Noto Serif JP', serif;
       font-size: 1.15rem;
@@ -129,7 +130,7 @@
       border: none;
       cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 4px 24px rgba(192,57,43,0.55), 0 0 0 3px rgba(201,168,76,0.35);
+      box-shadow: 0 4px 24px rgba(200,36,89,0.55), 0 0 0 3px rgba(201,168,76,0.35);
       transition: transform 0.2s, box-shadow 0.2s;
       position: relative;
       overflow: hidden;
@@ -140,7 +141,7 @@
       inset: 0;
       background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.12) 50%, transparent 100%);
     }
-    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(192,57,43,0.65), 0 0 0 3px rgba(201,168,76,0.5); }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,36,89,0.65), 0 0 0 3px rgba(201,168,76,0.5); }
 
     .hero-note { margin-top: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.45); }
 
@@ -178,7 +179,7 @@
     .pain-list li {
       display: flex; align-items: flex-start; gap: 0.8rem;
       padding: 0.85rem 1rem; border-radius: 8px; margin-bottom: 0.6rem;
-      background: #fff7f5; border-left: 3px solid var(--crimson);
+      background: #fff7f9; border-left: 3px solid var(--crimson);
       font-size: 0.95rem; color: var(--ink);
     }
     .pain-list li .check { color: var(--crimson); font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
@@ -227,7 +228,7 @@
 
     .fortune-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 1rem 0; }
     .fortune-chip { text-align: center; padding: 0.5rem 0.3rem; border-radius: 8px; font-family: 'Noto Serif JP', serif; font-size: 0.85rem; font-weight: 700; }
-    .fortune-chip:nth-child(1) { background: linear-gradient(135deg, #c0392b, #e74c3c); color: #fff; }
+    .fortune-chip:nth-child(1) { background: linear-gradient(135deg, var(--crimson-dark), var(--crimson)); color: #fff; }
     .fortune-chip:nth-child(2) { background: linear-gradient(135deg, #c9a84c, #f0d080); color: #2c1a0e; }
     .fortune-chip:nth-child(3) { background: linear-gradient(135deg, #6c3483, #9b59b6); color: #fff; }
     .fortune-chip:nth-child(4) { background: linear-gradient(135deg, #1a5276, #2e86c1); color: #fff; }
@@ -243,13 +244,151 @@
     }
     .form-note { font-size: 0.8rem; color: var(--muted); margin-top: 0.8rem; }
 
-    .utage-placeholder {
-      background: #f9f5ef; border: 2px dashed var(--gold);
-      border-radius: 12px; padding: 2.5rem 1.5rem;
-      text-align: center; color: var(--muted); font-size: 0.9rem;
+    /* FORM ELEMENTS */
+    .email-label {
+      display: block;
+      text-align: left;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
     }
-    .utage-placeholder .ph-title { font-family: 'Noto Serif JP', serif; font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 0.5rem; }
-    .utage-placeholder code { display: block; margin-top: 0.8rem; background: rgba(0,0,0,0.05); padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.8rem; color: #888; font-family: monospace; }
+    .email-label .required-badge {
+      display: inline-block;
+      background: var(--crimson);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+    .email-input {
+      display: block;
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 2px solid #e8d8c0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--ink);
+      background: #fdfaf5;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      margin-bottom: 1.2rem;
+    }
+    .email-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+    }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 50%, var(--crimson-dark) 100%);
+      color: #fff;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(200,36,89,0.45), 0 0 0 3px rgba(201,168,76,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .submit-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.12) 50%, transparent 100%);
+    }
+    .submit-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,36,89,0.6), 0 0 0 3px rgba(201,168,76,0.5); }
+    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+    /* THANK YOU */
+    .thanks-wrap {
+      display: none;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .thanks-wrap.visible { display: block; }
+
+    .thanks-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      animation: bounceIn 0.6s ease;
+    }
+    @keyframes bounceIn {
+      0%   { transform: scale(0.3); opacity: 0; }
+      50%  { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .thanks-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--crimson);
+      margin-bottom: 0.6rem;
+    }
+    .thanks-gold-line {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, var(--gold), var(--gold-lt), var(--gold));
+      margin: 0.8rem auto 1.2rem;
+      border-radius: 99px;
+    }
+    .thanks-message {
+      font-size: 0.97rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+    .thanks-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, rgba(200,36,89,0.08), rgba(201,168,76,0.12));
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 12px;
+      padding: 0.9rem 1.5rem;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+    .thanks-badge .tb-icon { font-size: 1.4rem; }
+
+    /* SENDING STATE */
+    .sending-spinner {
+      display: inline-block;
+      width: 18px; height: 18px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ERROR */
+    .form-error {
+      display: none;
+      background: #fff5f7;
+      border: 1px solid var(--crimson);
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+      color: var(--crimson);
+      margin-top: 0.8rem;
+      text-align: left;
+    }
+    .form-error.visible { display: block; }
 
     /* FAQ */
     .faq-section { background: var(--parchment); }
@@ -284,27 +423,72 @@
 
 <script>
 window.addEventListener('DOMContentLoaded', () => {
+  // Petals
   for (let i = 0; i < 14; i++) {
     const p = document.createElement('div');
     p.className = 'petal';
     p.style.cssText = `left:${Math.random()*100}%;animation-duration:${6+Math.random()*8}s;animation-delay:${Math.random()*8}s;width:${6+Math.random()*7}px;height:${6+Math.random()*7}px;`;
     document.querySelector('.hero').appendChild(p);
   }
+
+  // Fade-up observer
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
   }, {threshold: 0.15});
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  document.querySelectorAll('.faq-q').forEach(q => {
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach({
     q.addEventListener('click', () => q.closest('.faq-item').classList.toggle('open'));
+  });
+
+  // Form AJAX submission
+  const form = document.getElementById('register-form');
+  const formWrap = document.getElementById('form-area');
+  const thanksWrap = document.getElementById('thanks-area');
+  const submitBtn = document.getElementById('submit-btn');
+  const errorMsg = document.getElementById('form-error');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('mail').value.trim();
+    if (!email) return;
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="sending-spinner"></span>晻録綂…';
+    errorMsg.classList.remove('visible');
+
+    const body = new URLSearchParams();
+    body.append('mail', email);
+
+    try {
+      await fetch('https://utage-system.com/r/is3tEnrncQfI/store', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
+      });
+    } catch (err) {
+      // no-cors always throws or gives opaque response — treat as success
+    }
+
+    // Show thank you
+    formWrap.style.display = 'none';
+    thanksWrap.classList.add('visible');
+
+    // Scroll into view smoothly
+    thanksWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
 </script>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">✦ 無料メルマガ 登録受付中 ✦</div>
-  <h1 class="hero-title">お金と豊かさの<span>叡智</span>を<br>毎日あなたへ届ける</h1>
-  <p class="hero-sub">投資・ジャーナリング・日常の気づき——<br>豊かさを引き寄せるヒントを、毎週無料でお届けします。</p>
+  <div class="hero-badge">✖ 無斘メルマガ 登録受付中 ✖</div>
+  <h1 class="hero-title">ど運どけと�ā⌁のどの切☏†���はあおなたへ届けか</h1>
+  <p class="hero-sub">投資・者資・へ�+女の涗づき——<br>豊かさを引き寄せりをは届けします。</p>
   <div class="hero-gift">
     <span class="icon">🎋</span>
     <span>今だけ登録特典：<strong>巫女の金運おみくじ</strong>プレゼント</span>
@@ -316,158 +500,38 @@ window.addEventListener('DOMContentLoaded', () => {
 <!-- PAIN -->
 <section class="pain-section">
   <div class="container">
-    <p class="section-label fade-up">こんなお悩みはありませんか？</p>
-    <h2 class="section-title fade-up">「お金のことを<span>ちゃんと考えたい</span>のに<br>どこから始めればいいかわからない…」</h2>
+    <p class="section-label fade-up">こんなお悩みはありませんお���</p>
+    <h2 class="section-title fade-up">「お金はことを<span>ちゃんと考えたい</span>のに<br>どこから始めればいいかわからない…」</h2>
     <ul class="pain-list">
-      <li class="fade-up"><span class="check">✗</span>投資を始めたいけど、何から勉強すればいいか迷っている</li>
+      <li class="fade-up"><span class="check">✗</span>投資を始ぁたいけど、何から勉強すればいいか迷っている</li>
       <li class="fade-up"><span class="check">✗</span>毎月お金が残らない。なんとなくお金が不安</li>
       <li class="fade-up"><span class="check">✗</span>自己投資やジャーナリングに興味はあるが続かない</li>
-      <li class="fade-up"><span class="check">✗</span>「豊かさ」「引き寄せ」という言葉は好きだけど具体的な行動がわからない</li>
-      <li class="fade-up"><span class="check">✗</span>忙しい毎日の中で、自分と向き合う時間が取れていない</li>
-    </ul>
-    <p class="body-text fade-up">このメルマガは、そんな<strong>「豊かさを求めているけれど、一歩踏み出せない」</strong>あなたのために作られています。</p>
-  </div>
-</section>
-
-<div class="divider"><span class="divider-icon">⸻ ✦ ⸻</span></div>
-
-<!-- VALUE -->
-<section class="value-section">
-  <div class="container">
-    <p class="section-label fade-up">メルマガでお届けすること</p>
-    <h2 class="section-title fade-up">5つのテーマで<span>豊かさ</span>を育てる</h2>
-    <div class="value-cards">
-      <div class="value-card fade-up">
-        <div class="vc-icon">💴</div>
-        <div class="vc-title">お金の知識</div>
-        <div class="vc-desc">お金の基本から節約術まで、難しくなく、すぐ実践できるヒントをお届け</div>
+      <li class="fade-up"><span class="check">✗</span>「豊かさ」「引き寄せ」とう言葉は好きだけど具体的な行動がわからない</li>
+      <li class="fade-up"><span class="check">✗</span>忙しあでちでみ聋全無料が不要になればいないない新ゲ合ていな�O���[���\��H���K]^�YK]\���d��k��n�c,�,���k�� x�gx���j���ۙϸ�#(�x�b��exह�`��x�i��a8���dx�8�jx� y. 9�jz.#��o�a��f��j��a8�#O���ۙϸ�`��j��g��k��g��x�j�/g8�x�8�i��a8�o��fx� �����]�����X�[ۏ���]��\��H�]�Y\����[��\��H�]�Y\�ZX�ۈ���.�8�)�8�.���[���]����KKH�SQHKO���X�[ۈ�\��H��[YK\�X�[ۈ���]��\��H��۝Z[�\�����\��H��X�[ۋ[X�[�YK]\����x������8�i��b�lb��dx�fx���d��j�����\��H��X�[ۋ]]H�YK]\��x�i8�k�����8���i��[��,b��b��eO��[��ऺ ���i������]��\��H��[YKX�\�ȏ��]��\��H��[YKX�\��YK]\���]��\��H���ZX�ۈ��'��]���]��\��H���]]H���b�a�x�k���z+f�]���]��\��H���Y\�ȏ��b�a�x�k�g+8�b��y��9�!:(d��o��i�� zf���e��c��j��b�� x�fx�`�k��-�x�i��cx���������8स�b�lb��dO�]����]���]��\��H��[YKX�\��YK]\���]��\��H���ZX�ۈ��'���]���]��\��H���]]H����z,�����,���(�oh��$�]���]��\��H���Y\�ȏ��T�x�8�8������������y��z,���j��jx� yb'yo�� !x�j�࠸���b�ࢸ�8�fx�a:em��'���z,���k�  ��b9��O�]����]���]��\��H��[YKX�\��YK]\���]��\��H���ZX�ۈ��'����]���]��\��H���]]H���8�����8���������]���]��\��H���Y\�ȏ���8�c��d��j8�i��'z  ��c9�m9�!��ex�8��� ��b�a�x�j9�'���xह�d8�m�!�m�yk�*lx�k������8���]����]���]��\��H��[YKX�\��YK]\���]��\��H���ZX�ۈ��'�/��]���]��\��H���]]H����yn.8�k��%��ix�cO�]���]��\��H���Y\�ȏ�l#��ex�j��乡h��c9.���'�हi"x�b8��� ���x�!x�k����ਸ�e��j�,b��b��exऺ)���i8�dx����������]����]���]��\��H��[YKX�\��YK]\���]��\��H���ZX�ۈ���*�]���]��\��H���]]H��,b��b��ex�k����8����O�]���]��\��H���Y\�ȏ�,b��b��exहo%x�cyk�8�f����'z  ���x� �a�y`m8�b��y�m8�b8�i�� yi%�`m8हi"x�b8��ਸ�����x��8��O�]����]����]����]�����X�[ۏ���]��\��H�]�Y\����[��\��H�]�Y\�ZX�ۈ���.�8�)�8�.���[���]����KKH��US�KO���X�[ۈ�\��H���][�\�X�[ۈ���]��\��H��۝Z[�\�����\��H��X�[ۋ[X�[�YK]\���n�c,��nyan8�k��e9�b9a�O�����\��H��X�[ۋ]]H�YK]\��.��h8�d{� O�[��[OH���܎��\�KY��[
+H���#9m��il��k�a�z`b��b��o��c��f8�#O��[�����ह�(y��x�����8�8�����<'������]��\��H���][�X�\��YK]\���]��\��H���][�]]H��'��9m��il��k�a�z`b��b��o��c��f�]����\��H���][�Y\�ȏ��]ZH[ܚH[��Y�[����][�\�ܚ\[ۈ\�B����]��\��H��ܝ[�K\�]�Y]ȏ��]��\��H��ܝ[�KX�\��i)�i)�d"O�]���]��\��H��ܝ[�KX�\��i)�d"O�]���]��\��H��ܝ[�KX�\��.+yd"O�]���]��\��H��ܝ[�KX�\��`#�d"O�]���]��\��H��ܝ[�KX�\���*�d"O�]���]��\��H��ܝ[�KX�\��d"O�]����]����[OH���܎��ؘJ�MK�MK�MK�MJN��۝\�^�N����[N�X\��[�]����[N�^X[Yێ��[�\�ȏ��.�9�n�c,�o�8�j�T�8�c:*&:/"x�ex�8�i��a8�o��fx� �/e9n���i�࠹k��`jx�j��e9b*y�*8�a8�g��h8�dx�o��fx� �'�.����]����\��H���K]^�YK]\��[OH���܎��ؘJ�MK�MK�MK��JNȏ��8��x������હ��z,���k�n���*9bcy($x� ����` ylb��c���x��8���."�`�8�c9."9��x�k��j��8�l8�a8�h��i�࠸�x�8��x�j��ex�a8� �����o��Zh�k��n�c,�हc���dyc��h��i�� x�b�(�x�c��j��f����O�����]��[OH�^X[Yێ��[�\��X\��[�]����[NȈ�\��H��YK]\���H�Y�H�ܙY�\�\���\��H��KX����.��fx�d9�(y��8�i�c���dyc���8����O���]����]�����X�[ۏ���]��\��H�]�Y\����[��\��H�]�Y\�ZX�ۈ���.�8�)�8�.���[���]����KKH�Q�T�T�KO���X�[ۈ�\��H��Y�\�\�\�X�[ۈ�YH��Y�\�\����]��\��H��۝Z[�\�����\��H��X�[ۋ[X�[�YK]\���(y��y�n�c,���x�x��8�������\��H��X�[ۋ]]H�YK]\��"jyan8हc���dyc��h��i�����[��,b��b��ex�k��b��k��o��o��o���[��ह�%���O�����]��\��H��ܛK]ܘ\�YK]\����KKH�ԓHT�PHKO��]�YH��ܛKX\�XH����ܛHYH��Y�\�\�Y�ܛH���X�[�\��H�[XZ[[X�[��܏H�XZ[���8��x��8���ਸ��x��8�B��[��\��H��\]Z\�YX�Y�H��o�y�"��[����X�[��[�]��\��H�[XZ[Z[�]��YH�XZ[��\OH�[XZ[���[YOH�XZ[���\]Z\�Y�X�Z�\�H�^[\P[XZ[���H��]]���\]OH�[XZ[�����]ۈ�\��H��X�Z]X���YH��X�Z]X���\OH��X�Z]���<'��9.��fx�d:a�z`b��b��o��c��f8हc���dyc��������؝]ۏ��]��\��H��ܛKY\��܈�YH��ܛKY\��܈���:` y/�y.+x�j��8��x��8�c9f���'��e��o��e��g�� �� ����स�b��a8�i�a�yn���b��x�e��c��i#��い</div>
+        </form>
+        <p class="form-note">✖ 登録は無斘です。受信登からいつでむ��除できます。</p>
       </div>
-      <div class="value-card fade-up">
-        <div class="vc-icon">📈</div>
-        <div class="vc-title">投資・資産形成</div>
-        <div class="vc-desc">NISAやインデックス投資など、初心者にもわかりやすい長期投資の考え方</div>
-      </div>
-      <div class="value-card fade-up">
-        <div class="vc-icon">📓</div>
-        <div class="vc-title">ジャーナリング</div>
-        <div class="vc-desc">書くことで思考が整理される。お金と感情を結ぶ自己対話のワーク</div>
-      </div>
-      <div class="value-card fade-up">
-        <div class="vc-icon">🌿</div>
-        <div class="vc-title">日常の気づき</div>
-        <div class="vc-desc">小さな習慣が人生を変える。日々の暮らしに豊かさを見つけるヒント</div>
-      </div>
-      <div class="value-card fade-up">
-        <div class="vc-icon">✨</div>
-        <div class="vc-title">豊かさのマインド</div>
-        <div class="vc-desc">豊かさを引き寄せる思考法。内側から整えて、外側を変えるアプローチ</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<div class="divider"><span class="divider-icon">⸻ ✦ ⸻</span></div>
-
-<!-- TOKUTEN -->
-<section class="tokuten-section">
-  <div class="container">
-    <p class="section-label fade-up">登録特典のご案内</p>
-    <h2 class="section-title fade-up">今だけ！<span style="color:var(--gold-lt)">「巫女の金運おみくじ」</span><br>を無料プレゼント🎋</h2>
-    <div class="tokuten-card fade-up">
-      <div class="tokuten-title">🎋 巫女の金運おみくじ</div>
-      <p class="tokuten-desc">
-        古来より神社で行われてきたおみくじを、現代の「金運・豊かさ」をテーマにアレンジ。<br>
-        美しい巫女のアニメーションとともに、あなたへのメッセージをお届けします。<br><br>
-        大大吉から吉まで、全6段階の運勢それぞれに<strong style="color:var(--gold-lt)">お金・豊かさへの具体的なアドバイス</strong>を添えました。
-      </p>
-      <div class="fortune-preview">
-        <div class="fortune-chip">大大吉</div>
-        <div class="fortune-chip">大吉</div>
-        <div class="fortune-chip">中吉</div>
-        <div class="fortune-chip">小吉</div>
-        <div class="fortune-chip">末吉</div>
-        <div class="fortune-chip">吉</div>
-      </div>
-      <p style="color:rgba(255,255,255,0.55); font-size:0.78rem; margin-top:0.8rem; text-align:center;">※ 登録後にURLをお送りします。何度でも楽しめます🌸</p>
-    </div>
-    <p class="body-text fade-up" style="color:rgba(255,255,255,0.65);">
-      メルマガ登録は完全無料。毎週届くメールが不要になればいつでも解除できます。<br>まずは特典を受け取って、豊かさへの第一歩を踏み出してみてください。
-    </p>
-    <div style="text-align:center; margin-top:2rem;" class="fade-up">
-      <a href="#register" class="cta-btn">今すぐ無料で受け取る →</a>
-    </div>
-  </div>
-</section>
-
-<div class="divider"><span class="divider-icon">⸻ ✦ ⸻</span></div>
-
-<!-- REGISTER -->
-<section class="register-section" id="register">
-  <div class="container">
-    <p class="section-label fade-up">無料登録フォーム</p>
-    <h2 class="section-title fade-up">特典を受け取って<br><span>豊かさの扉</span>を開く</h2>
-    <div class="form-wrap fade-up">
-      <form action="https://utage-system.com/r/is3tEnrncQfI/store" method="post">
-    <div class="card-body">
-        <div class="form-group">
-            <label class="font-weight-bold" for="mail">メールアドレス <span class="badge badge-danger">必須</span></label>
-            <input class="form-control" required="" id="mail" type="email" name="mail" value="" autocomplete="email">
-        </div>
-        <button class="btn btn-block btn-success btn-lg" type="submit">登録する</button>
-    </div>
-</form>
-      <p class="form-note">✦ 登録は無料です。受信したメールからいつでも解除できます。</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section">
-  <div class="container">
-    <p class="section-label fade-up">よくある質問</p>
-    <h2 class="section-title fade-up">FAQ</h2>
-    <div class="faq-item fade-up">
-      <div class="faq-q"><span class="qmark">Q.</span>本当に無料ですか？</div>
-      <div class="faq-a">はい、完全無料です。登録費用や月額費用は一切かかりません。</div>
-    </div>
-    <div class="faq-item fade-up">
-      <div class="faq-q"><span class="qmark">Q.</span>解除はいつでもできますか？</div>
-      <div class="faq-a">はい、メール下部の「配信解除」リンクから、いつでも解除できます。</div>
-    </div>
-    <div class="faq-item fade-up">
-      <div class="faq-q"><span class="qmark">Q.</span>登録特典のおみくじはどのように受け取れますか？</div>
-      <div class="faq-a">登録後に送られる確認メールにURLが記載されています。スマートフォンでも快適にご利用いただけます。</div>
-    </div>
-    <div class="faq-item fade-up">
-      <div class="faq-q"><span class="qmark">Q.</span>どのくらいの頻度でメールが届きますか？</div>
-      <div class="faq-a">基本的に週1〜2回程度お届けします。読み応えのある内容を厳選してお届けしますので、受信トレイが溢れる心配はありません。</div>
-    </div>
-    <div class="faq-item fade-up">
-      <div class="faq-q"><span class="qmark">Q.</span>投資の初心者でも大丈夫ですか？</div>
-      <div class="faq-a">もちろんです。専門用語はわかりやすく解説しながら、初心者の方でもすぐに実践できる内容でお届けします。</div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="container">
-    <h2 class="section-title fade-up">豊かさへの扉は<br>もう目の前にあります</h2>
-    <p style="color:rgba(255,255,255,0.7); margin-bottom:2.5rem;" class="fade-up">登録は30秒。特典の金運おみくじで、今日から新しい一歩を。</p>
-    <a href="#register" class="cta-btn fade-up">今すぐ無料で登録する →</a>
-    <p class="hero-note">✦ 無料・いつでも解除可能</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 豊かさのメルマガ. All rights reserved.</p>
-  <p>
-    <a href="#">プライバシーポリシー</a>
-    <a href="#">特定商取引法に基づく表記</a>
-    <a href="#">お問い合わせ</a>
-  </p>
-</footer>
-
-</body>
-</html>
+      <!-- THANK YOU AREA (hidden until submission) -->
+      <div class="thanks-wrap" id="thanks-area">
+        <div class="thanks-icon">🎋0</div>
+        <div class="thanks-title">わす録ありがでうございます！</div>
+        <div class="thanks-gold-line"></div>
+        <p class="thanks-message">
+          まもぐめよお登録のメールアドレス���
+)x���(�������������ɽ����3�ޯ��ώ��G�/�+���?�c�5��UQI3�
+K�+��
++�_���g����ɽ���������(����������������;���/�����Ӗ�������
+��?�7������W�
+�����
+K�S��뢪7�?���W�����(�����������O�
+3�/�
+'��+�/�W����&'�;�Z/�����7���g�~2��(�����������(���������؁������ѡ���̵�������(����������������������ш��������"'��<������(�����������������>_����#���
+�
+K�S�Zg���?���W���H������(��������𽑥��(������𽑥��((����𽑥��(��𽑥��(�͕�ѥ���((�����D����(�͕�ѥ��������􉙅ĵ͕�ѥ����(���؁�����􉍽�х���Ȉ�(�������������͕�ѥ�������������������
+#�?��
+/��
+�|C��|���(�����ȁ������͕�ѥ���ѥѱ�����������D���(�����؁�����􉙅ĵ�ѕ�����������(�������؁�����􉙅ĵĈ�������������ŵ�ɬ��D��������r���O�����Zc���g����|𽑥��(�������؁�����􉙅ĵ���������_�R��&7��G���g�(������𽑥��(����𽑥��(�����؁�����􉙅ĵ�ѕ�����������(�������؁�����􉙅ĵĈ�������������ŵ�ɬ��D�����������f���������
+���7���g�/��|𽑥��(�������؁�����􉙅ĵ��������������+�����3�����S�[����?�c�7�
+��9�8<�8�8.8(�8�8�8#��F�c���F�c��F�b6�73�&f֗FV�fFR�W#��F�b6�73�&f�#��7�6�73�'�&�#����7��i����.���X[�8�8�8�8(�8n8~8nX�~8X�n8(�8�8�8������F�c��F�b6�73�&f�#�y���8~[��8�8(.8(�8(�8"x�~j8:8;�8:�8�U$�8Ί���Ȟ8^8(�8n8N8�8�8.i����.{��8~8(>8*.8���F�c���F�c��F�b6�73�&f֗FV�fFR�W#��F�b6�73�&f�#��7�6�73�'�&�#����7��8�8�8�8(�8N8�Z�[�n8~8:8;�8:�8�[�8�8�8�8������F�c��F�b6�73�&f�#�[��8�K�nK�ny�N8���".Y��z��[�n8�[�8~8�8�8#��F�c���F�c��F�b6�73�&f֗FV�fFR�W#��F�b6�73�&f�#��7�6�73�'�&�#����7��h�^�8~8�Y	X��[�>8~8(.ZJ~K��ZJ�8~8�8������F�c��F�b6�73�&f�#�8(.8^8(�8)>8~8�8 ���F�c���F�c���F�c���6V7F���ࠣ���d���5D����6V7F���6�73�&f����7F#��F�b6�73�&6��F��W"#�ƃ"6�73�'6V7F����F�F�RfFR�W#��8�8^8�8�h��8�8��o�8�8�8�8.8(�8�8����#��7G��S�&6���#�&v&�#SR�#SR�#SR��r���&v���&�GF�ӣ"�W&VӲ"6�73�&fFR�W#�y����.8��nzy.8.X��[�8�y��8�8�8�8�8~8K��iz^8�8(�ik8~8NK�jڞ8).8#�����&Vc�"7&Vv�7FW""6�73�&7F�'F�fFR�W#�K��8�8xJii�8~y����.8�8(�(i#����6�73�&�W&����FR#�)�bxJii�8;�8N8N8~8(�*~��NX���;������F�c���6V7F���ࠣ���d��DU"����f��FW#���*�##b��8�8^8�8:8:�89�8*����&�v�G2&W6W'fVB��������&Vc�"2#�89~8:�8*.898+~8;�89�8:�8+~8;����f�'7����f�'7����&Vc�"2#�[��YXnX�n[�^k9^8�Y�~8^8�8:z*�����f�'7����f�'7����&Vc�"2#�8�8�X��8.8)8Ӄ��������f��FW#ࠣ��&�G�����F���
